@@ -1,2 +1,2 @@
-# hlc-prOyect-portafolio
-## proyectos HTML5 Y CSS3 (CODEPURE)
+# HLC-Proyect-Portafolio
+## Proyectos HTML5 Y CSS3 (CODEPURE)
