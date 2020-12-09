@@ -1,0 +1,122 @@
+:root {
+  /*fonts*/
+  --big__shoulder__font: "Big Shoulders Stencil Display", cursive;
+  --dancing__script__font: "Dancing Script", cursive;
+  --roboto__generic__font: "Roboto", sans-serif;
+  /*colors*/
+  --background__general: rgba(0, 0, 2, 0.92);
+  --background__general__light: rgba(0, 0, 2, 0.5);
+  --background__red__light: rgba(255, 0, 0, 0.52);
+}
+
+/*tags property*/
+body {
+  font-family: var(--roboto__generic__font);
+  /*    background-color: var(--background__general);*/
+  background-color: white;
+}
+
+/*******************
+***STILES GENERALS****
+*******************/
+
+/*container 1200px*/
+.container__120 {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*******************
+***BOTONES GENERICOS****
+*******************/
+.btn {
+  padding: 1rem 2rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+
+.btn__output__animation {
+  position: relative;
+  border-radius: 1rem;
+  border: solid red 1px;
+  /*-webkit-text-stroke: 1px white;*/
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.btn__output__animation:hover {
+  transform: scale(1.1);
+}
+.btn__output__animation::after {
+  content: "";
+  height: 10%;
+  position: absolute;
+  background-color: var(--background__red__light);
+  left: 50%;
+  bottom: 0;
+  z-index: -1;
+}
+@keyframes animated__btn__one {
+  0%,50% {
+    height: 0%;
+    width: 2.5%;
+    border-radius: 0;
+  }
+  50% {
+    height: 100%;
+    left: 50%;
+    border-radius: 0;
+  }
+  100% {
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+.btn__output__animation:hover::after {
+  animation: ease-in-out 0.5s animated__btn__one;
+  animation-fill-mode: forwards; /*mantiene el estado de la animacion mientras hacemos hover*/
+}
+/*
+.btn__output__animation::before{
+  content: attr(data-animationGeneric);
+  position: absolute;
+  transform: translate(50%, 50%);
+}
+*/
+
+/*******************
+***SOMBRAS EN CAJAS REFER PARA PROPIO FRAMEWROK****
+*******************/
+.shadow__inset__ouset {
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow__generic__out {
+  box-shadow: 1px -1px 12px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px -1px 12px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px -1px 12px 2px rgba(0, 0, 0, 0.75);
+}
+
+/*ANIMATION UNDERLINE BEFORE MOVE GENERIC*/
+@keyframes anime_underline {
+  0% {
+    width: 50%;
+  }
+  50% {
+    width: 100%;
+  }
+}
+
+
+/*btn submit*/
+.btn__submit{
+ background-color: transparent; 
+ display: inline-block;
+ cursor: pointer;
+}
